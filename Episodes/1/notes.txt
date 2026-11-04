@@ -1,0 +1,5 @@
+==>1.what is cdn react ?
+cdn la react library host pannirukanga, 
+fetching the react and put it in code using the cdn links.
+
+==>2.what is cross origin ?

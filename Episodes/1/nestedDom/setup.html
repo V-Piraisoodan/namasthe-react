@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- indha mathiri root kulla evlo tag vachalum adhu render agathu -->
+        <!-- because app.js la naama parent object pass pandrom so andha object idha replace senjirum -->
+        <!-- ithu show agum fraction of seconds kullaye naame make panna objects idha replace panni namma object than render agum -->
+        <!-- venumna browser ah refersh panni paaru therium -->
+
+        <!-- reason first intha id="root" element thana iruku so idhu mudhal la render agum -->
+        <!-- then ithuku keela irukka react and react dom scripts tag render agum -->
+        <!-- then athukapram tha app.js la naama make panna objects render agum -->
+        <!-- adhaala than konja neram indha element show aguthu then app.js la irukka element replace aguthu -->
+        <h1>Main Root</h1>
+        <h1>Main Root</h1>
+        <h1>Main Root</h1>
+        <h1>Main Root</h1>
+    </div>
+
+    <!-- inga indha script file potta error varum, yen'na ithuku apram thana react initialise agum, so order of the code important -->
+    <!-- <script src="./app.js"></script> -->
+
+
+    <!-- ithu than core react code -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- ithu react dom code -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
+
+
+<!-- here react is library or framework -->
+<!-- ans is this is library -->
+
+<!-- react is only work on root only, indha small portion kulla mattum than work aguthu, entire body or app kulla work agala -->
+<!-- thats why we know easily this is library -->
+<!-- root nu mattum podanum nu illa naama enna name'nalum pottuklam -->
+
+
+<!-- -------------- -->
+<!-- 
+    <div id="root"> </div>
+    <h1 >Hello </h1>   
+-->
+<!-- indha maari naame body kulla potta react indha root la mattum tha work agum -->
+<!-- h1 tag ah react disturb panadhu -->

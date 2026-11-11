@@ -1,0 +1,65 @@
+-- here in this 2nd ebisode we see how to create the "create react app" ---
+
+// what is npm
+- this is called "node package manager"
+- but this is not actually node package manager. 
+- npm ku endha fullform'um illa
+- npm is behindly working as node package manager.(idhu behind la node package manager'aga vela seiuthu avlothan)
+- npm is the standard repository for all the packages. 
+- any package we need to include in our project we use npm.
+- "npx create react app" - nu kuduthu app create seirapo npm intha command kulla run agi namaku packages automatic ah include agirudhu.
+- now we add npm directly (without using npx create react app command).
+- type "npm init" -- then project name and versoin and description lam kekkum, naama just enter kuduthutu vandha pothum.
+- test command - "jest" nu type pannanum, innum keyword and author lam kekkum adha enter pannanum (ithu necessary illa), but enter kuduthu next next ku ponum.
+- ippo package.json file create agum.
+
+// package.json
+- package.json is the configuration for npm
+- why this package.json is need ?? 
+- oru librsry naama install panna athoda versions ah ellam npm manage pannikkum, andha version details ellam intha package.json file la irukkum..
+- this is the configuration of npm.
+
+// bundlers
+- ex: veet, webpack, parcel
+- what is use - this is used to bundle our app and shipped into production.
+- naama "create react app" use pandrapo indha bundler ah behind la use pannilkkum.
+- "npm install parcel" - naame idha project la add seiyanumna "npm install parcel" nu potta install agirum.
+- "npm install -D parcel" why "-D" ?
+-ans: there are two type of depedencis/ packages are there,
+- one is "dev depedencis", another one is "normal depedencis".
+- dev depedencis used for development , normal depedencis is used for production.
+- packages.json file la versions lam irukum, anga "axios": "^0.21.4", "zod": "^3.22.4", indha mathiri irukum.
+- ithula "^3.22.4" (^ intha symbol yen podurom ?)
+-ans: suppose minor version yedhachi release achina ithu automatic ah version update pannikum,athuku naama vaikrom.
+- note: naame idhe mathiri "zod": "~3.22.4", (~ intha symbol use panvom).
+- ithu major version update pandrathuku use agum. ex: version 3.22.4 la irundhu direct ah 4.15.2 intha maari major update aganumna naama intha symbol use panvom.
+- caret symbol (^) and (~) tilde symbol.
+- naame caret symbol use pandrathu safe, because major version update achina neraya error/issue code la vara vaaippu adhigam.
+- "zod": "3.22.4" intha maari caret and tilde symbol illama potta yethume update agathu, enna version irukko athu apdiye install agum.
+
+// why package-lock.json
+- suppose "zod": "~3.22.4" indha version irukuthuna idhe same version than keepup aganumnu naama lock pannipom.
+- local la work agum and prod la oru silathu work agathu, so ipdi lock pannitomna same version than prod laum install agum so error kammi agum.
+- intha maari version ah lock pandrathukuthan intha file use pandrom.
+
+
+// node-modules
+- this is a collection of depedencis.
+- npm la irukka ella code ah fetch panni "node-modules" la vachikrom.
+- for easy understand -- "package.json" is a configuration file for npm and the "node-modules" i like database it having datas.
+- naama "zod": "~3.22.4 nu version configuration panni vaippom but ithoda datas ellam "node-modules" la irukkum.
+- naame "zod" ah install panna "node-modules" la ithoda data mattum irukadhu idhukooda sendhu neraya datas and files irukkum athellam enna ?
+- package.json la naama depedencis/librarya install pannuvom, so "zod" install aguthu and then ithoda files "node-modules" la add aguthu,
+- here andha "zod" run agurathuku neraya depedencis/libraries thevapadum thana, so athuku thevayanathum sendhu "node-modules" la create agum.
+- idhanala thana node-modules la yegapatta files and datas irukku.
+
+// transitive depedencis
+- zod ku oru sila depedencis theva, andha depedencis ku innoru depedencis theva, andha depedencis ku vera oru depedencis theva ipdi onnoda onnu sammandhapaduthi irukrathu called "transitive depedencis".
+- indha node-modules la irukkura depedencis ah open panni patha athukullaum package.json file irukum.
+
+// gitignore
+- naame package.json and package-lock.json ah github la podanum, yenna naama enna depedencis/libraries podanum enna version maintain seinum nu naama sollanum.
+- so indha two files ah naame github la podanum.
+- but node-modules ah poda vena (lot of files irukkum).
+- naama npm install nu pottale pothum node-modules vanthurum.
+- evlo mura delete pannalum sari vanthurum.so naama github la ithellma poda vena. idha local ku clone yethu apram "npm install" kuduthale ellam vanthurum.

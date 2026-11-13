@@ -1,2 +1,13 @@
 -- here in this 2nd ebisode PART 2 ---
 
+// npx vs npm
+- npm is used to install the packages.
+- npx is used to executes the packages.
+
+// how to we get/bring the react library into our app ?
+- naama index.html(setup.html) file la cdn's sethuruppom (refer nestedDom's setup.html file).
+- naama script moolama (cdn) react ah code la get panniruppom,but ithu not a best way.
+- naama npm moolama react libraries ah code ku get panniklam.
+- why the cdn method is not good way ? -- refer this (cdn la irundha naama react ah url moolama fetch pannitu varnum, athuve install panna node-modules la irunthu easya access panniklam)
+- and install the react using "npm install react"
+- now inga naama -D podala, why ? parcel ku "npm install -D parcel" nu pottom ana react ku podala why ? -- refer
